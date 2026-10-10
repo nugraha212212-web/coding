@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Mainan Ceria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🧸 Toko Mainan Ceria</h1>
+    <p>Temukan Mainan Favoritmu!</p>
+</header>
+
+<nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#video">Video</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<section class="hero" id="beranda">
+    <h2>Selamat Datang di Toko Mainan Ceria!</h2>
+    <p>Mainan seru untuk menemani waktu bermainmu.</p>
+    <a href="#produk" class="tombol">Lihat Produk</a>
+</section>
+
+<section id="produk" class="produk">
+    <h2>⭐ Koleksi Mainan Kami</h2>
+
+    <div class="daftar-produk">
+        <div class="kartu">
+            <img src="foto/mainan1.jpg" alt="Boneka lucu">
+            <h3>Boneka Lucu</h3>
+            <p>Rp50.000</p>
+            <button onclick="beli('Boneka Lucu')">Beli</button>
+        </div>
+
+        <div class="kartu">
+            <img src="foto/mainan2.jpg" alt="Mobil mainan">
+            <h3>Mobil Mainan</h3>
+            <p>Rp35.000</p>
+            <button onclick="beli('Mobil Mainan')">Beli</button>
+        </div>
+
+        <div class="kartu">
+            <img src="foto/mainan3.jpg" alt="Robot mainan">
+            <h3>Robot Mainan</h3>
+            <p>Rp75.000</p>
+            <button onclick="beli('Robot Mainan')">Beli</button>
+        </div>
+
+        <div class="kartu">
+            <img src="foto/mainan4.jpg" alt="Balok susun">
+            <h3>Balok Susun</h3>
+            <p>Rp45.000</p>
+            <button onclick="beli('Balok Susun')">Beli</button>
+        </div>
+
+        <div class="kartu">
+            <img src="foto/mainan5.jpg" alt="Bola warna-warni">
+            <h3>Bola Warna-warni</h3>
+            <p>Rp25.000</p>
+            <button onclick="beli('Bola Warna-warni')">Beli</button>
+        </div>
+    </div>
+</section>
+
+<section id="video" class="video">
+    <h2>🎬 Video Koleksi Mainan</h2>
+    <p>Yuk, lihat video mainan favorit kami!</p>
+
+    <video controls>
+        <source src="video/mainan.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video.
+    </video>
+</section>
+
+<section id="kontak" class="kontak">
+    <h2>📞 Hubungi Kami</h2>
+    <p>Nama Toko: Toko Mainan Ceria</p>
+    <p>Alamat: Jl. Kebahagiaan No. 10</p>
+    <p>Email: tokomainanceria@email.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Toko Mainan Ceria. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
