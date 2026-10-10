@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. ABADI SELALU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">AS<span>.</span></div>
+    <h2>PT. ABADI SELALU</h2>
+
+    <button id="menuBtn" aria-label="Buka menu">☰</button>
+
+    <nav id="navbar">
+        <a href="#home">Beranda</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">PROFESIONAL • TERPERCAYA • BERKUALITAS</p>
+        <h1>Membangun Masa Depan Bersama</h1>
+        <p>
+            PT. ABADI SELALU berkomitmen memberikan
+            pelayanan terbaik, inovasi, dan solusi
+            berkualitas untuk kebutuhan pelanggan.
+        </p>
+        <a href="#tentang" class="btn">Kenali Perusahaan</a>
+    </div>
+</section>
+
+<section class="section" id="tentang">
+    <h2>Tentang Kami</h2>
+    <p class="description">
+        PT. ABADI SELALU adalah perusahaan yang
+        mengutamakan kualitas, kepercayaan, dan
+        kepuasan pelanggan. Kami terus berkembang
+        untuk memberikan pelayanan yang terbaik.
+    </p>
+
+    <div class="features">
+        <div class="card">
+            <h3>Visi</h3>
+            <p>Menjadi perusahaan terpercaya dan unggul.</p>
+        </div>
+
+        <div class="card">
+            <h3>Misi</h3>
+            <p>Memberikan pelayanan berkualitas dan inovatif.</p>
+        </div>
+
+        <div class="card">
+            <h3>Komitmen</h3>
+            <p>Membangun hubungan jangka panjang dengan pelanggan.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section services" id="layanan">
+    <h2>Layanan Kami</h2>
+    <p class="description">
+        Solusi untuk membantu kebutuhan pelanggan.
+    </p>
+
+    <div class="features">
+        <div class="card service-card">
+            <div class="emoji">🤝</div>
+            <h3>Konsultasi</h3>
+            <p>Memberikan informasi dan saran sesuai kebutuhan.</p>
+        </div>
+
+        <div class="card service-card">
+            <div class="emoji">💼</div>
+            <h3>Layanan Bisnis</h3>
+            <p>Mendukung kebutuhan dan pengembangan bisnis.</p>
+        </div>
+
+        <div class="card service-card">
+            <div class="emoji">⭐</div>
+            <h3>Kualitas Terbaik</h3>
+            <p>Mengutamakan kualitas dan kepuasan pelanggan.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Silakan kirim pesan kepada PT. ABADI SELALU.</p>
+
+    <form id="contactForm">
+        <input type="text" id="nama"
+            placeholder="Nama lengkap" required>
+
+        <input type="email" id="email"
+            placeholder="Alamat email" required>
+
+        <textarea id="pesan"
+            placeholder="Tulis pesan Anda" required></textarea>
+
+        <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+
+    <p id="hasil"></p>
+</section>
+
+<footer>
+    <div class="logo">AS<span>.</span></div>
+    <p>PT. ABADI SELALU</p>
+    <p>Perusahaan yang mengutamakan kepercayaan dan kualitas.</p>
+    <p class="copyright">
+        &copy; <span id="tahun"></span> PT. ABADI SELALU.
+        Hak cipta dilindungi.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #243047;
+    line-height: 1.7;
+    background: #ffffff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 8%;
+    background: #102747;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    font-size: 19px;
+    margin-right: auto;
+    margin-left: 12px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #f6b93b;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f6b93b;
+}
+
+#menuBtn {
+    display: none;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: white;
+    background:
+        linear-gradient(90deg,
+        rgba(10, 30, 57, 0.95),
+        rgba(10, 30, 57, 0.55)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #f6b93b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.hero-content > p:not(.tagline) {
+    margin-bottom: 28px;
+    color: #e1e8f0;
+}
+
+.btn {
+    display: inline-block;
+    background: #f6b93b;
+    color: #102747;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffd16b;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section h2,
+.contact h2 {
+    font-size: 32px;
+    color: #102747;
+    margin-bottom: 12px;
+}
+
+.description {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #68758a;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    border: 1px solid #e4e9f0;
+    box-shadow: 0 5px 20px rgba(16, 39, 71, 0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(16, 39, 71, 0.12);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #102747;
+}
+
+.card p {
+    color: #68758a;
+}
+
+.services {
+    background: #f4f7fb;
+}
+
+.emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    text-align: center;
+    padding: 75px 8%;
+    background: #ffffff;
+}
+
+.contact form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 2px solid #f6b93b;
+    border-color: #102747;
+}
+
+#hasil {
+    margin-top: 18px;
+    color: #176b42;
+}
+
+footer {
+    text-align: center;
+    background: #102747;
+    color: white;
+    padding: 35px 8%;
+}
+
+footer .copyright {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #bdc9d9;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-wrap: wrap;
+        padding: 14px 5%;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 12px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 6%;
+    }
+
+    .section,
+    .contact {
+        padding: 55px 6%;
+    }
+}
+
+const menuBtn = document.getElementById("menuBtn");
+const navbar = document.getElementById("navbar");
+const contactForm = document.getElementById("contactForm");
+const hasil = document.getElementById("hasil");
+
+// Membuka dan menutup menu pada HP
+menuBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+
+    const terbuka = navbar.classList.contains("active");
+    menuBtn.textContent = terbuka ? "✕" : "☰";
+    menuBtn.setAttribute("aria-expanded", terbuka);
+});
+
+// Menutup menu setelah link diklik
+navbar.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navbar.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+    });
+});
+
+// Menampilkan tahun secara otomatis
+document.getElementById("tahun").textContent =
+    new Date().getFullYear();
+
+// Validasi formulir kontak
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+
+    hasil.textContent =
+        "Terima kasih, " + nama +
+        "! Pesan berhasil diperiksa. Untuk mengirim pesan sungguhan, hubungkan formulir ke layanan backend atau email.";
+
+    contactForm.reset();
+});
